@@ -27,9 +27,9 @@ Style:        PASSED
 Findbugs:     No potential bugs found.   
 API:          PASSED
 
-Correctness:  41/41 tests passed
-Memory:       1/1 tests passed
-Timing:       10/41 tests passed
+Correctness:  41/41 tests passed  
+Memory:       1/1 tests passed  
+Timing:       10/41 tests passed  
 
 Aggregate score: 81.10% [Correctness: 65%, Memory: 10%, Timing: 25%, Style: 0%]
 
