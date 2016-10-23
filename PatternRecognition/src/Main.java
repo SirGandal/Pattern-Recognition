@@ -1,10 +1,11 @@
 import java.awt.Font;
+
 import edu.princeton.cs.algs4.StdDraw;
 
 public class Main {
 
   public static void main(String[] args) {
-
+    
     // read the n points from a file
     In in = new In(args[0]);
     int n = in.readInt();
@@ -45,8 +46,8 @@ public class Main {
 
     // print and draw the line segments
     long startTime = System.nanoTime();    
-    BruteCollinearPoints collinear = new BruteCollinearPoints(points);
-    //FastCollinearPoints collinear = new FastCollinearPoints(points);
+    //BruteCollinearPoints collinear = new BruteCollinearPoints(points);
+    FastCollinearPoints collinear = new FastCollinearPoints(points);
     long estimatedTime = System.nanoTime() - startTime;
     
     StdDraw.clear();
