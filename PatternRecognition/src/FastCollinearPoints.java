@@ -113,18 +113,6 @@ public class FastCollinearPoints {
     otherPoints = null;
   }
 
-  /*
-  private LineSegment[] getSegments() {    
-    LineSegment[] tmpSegments = new LineSegment[numberOfCollinearPointsFound / 2];
-    for (int i = 0; i < numberOfCollinearPointsFound; i = i + 2) {
-      tmpSegments[i / 2] = new LineSegment(
-          segmentsStartAndEndPoints.get(i), segmentsStartAndEndPoints.get(i + 1));
-    }
-    
-    return tmpSegments;
-  }
-  */
-  
   private LineSegment[] getSegmentsNoDuplicates() {    
     ArrayList<LineSegment> tmpSegments = new ArrayList<>();
     
@@ -162,22 +150,6 @@ public class FastCollinearPoints {
     
     segmentsStartAndEndPoints.add(numberOfCollinearPointsFound++, p1);
     segmentsStartAndEndPoints.add(numberOfCollinearPointsFound++, p2);
-    /*
-    boolean found = false;
-    for (int k = 0; k < numberOfCollinearPointsFound && !found; k = k + 2) {
-      if (segmentsStartAndEndPoints.get(k).compareTo(p1) == 0 && 
-          segmentsStartAndEndPoints.get(k + 1).compareTo(p2) == 0 || 
-          segmentsStartAndEndPoints.get(k).compareTo(p2) == 0 && 
-          segmentsStartAndEndPoints.get(k + 1).compareTo(p1) == 0) {
-        found = true;
-      }
-    }
-
-    if (!found) {
-      segmentsStartAndEndPoints.add(numberOfCollinearPointsFound++, p1);
-      segmentsStartAndEndPoints.add(numberOfCollinearPointsFound++, p2);
-    }
-    */
   }
   
   // the number of line segments
@@ -186,7 +158,6 @@ public class FastCollinearPoints {
       return 0;
     }
     return segments.length;
-    // return numberOfCollinearPointsFound / 2;
   }
 
   // the line segments
