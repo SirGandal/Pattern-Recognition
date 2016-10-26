@@ -14,6 +14,10 @@ Given a set of n distinct points in the plane, find every (maximal) line segment
 Bruteforce (left) and Fast (right) algorithm running on rs1423.txt:  
 <img src="PatternRecognition/src/resources/rs1423_brute.gif" width="400"><img src="PatternRecognition/src/resources/rs1423_fast.gif" width="400">
 
+## Challenges
+Trying to achieve the timing goal has been the main challenge. By looking at the grader output we have a performance drop when testing the running time of FastCollinearPoints. Performance requirement for the Fast approach is to make sure that the order of growth of the running time of the program is n^2logn in the worst case. 
+In the code designed, the main constructor takes n(n+nlogn+n) plus the time to eliminate duplicates which is quadratic in the amount of collinear points found. It is possible that the latter is the one causing problem since the number of collinear points found might be more than n.
+
 ## For fun
 As suggested [here](http://coursera.cs.princeton.edu/algs4/checklists/collinear.html) I created my own pattern recognition file starting from the custom Yoda input file I created for assignment 1.
 
